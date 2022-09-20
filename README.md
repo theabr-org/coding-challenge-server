@@ -6,6 +6,13 @@ This is a server that can be used to provide data for ABR coding challenges. Som
 
 The API key is `abrradialogy`.
 
+## Local usage
+
+- Clone this repo.
+- `cd` into the repo root.
+- Run `npm install`
+- Run `node server.js`
+
 ## Paths
 
 Paths can be used to provide the expected data. For example:
