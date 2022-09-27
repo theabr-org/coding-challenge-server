@@ -4,7 +4,7 @@ This is a server that can be used to provide data for ABR coding challenges. Som
 
 ## API Key
 
-The API key is `abrradialogy`.
+The API key is `abrradiology`.
 
 ## Local usage
 
