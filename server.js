@@ -1,10 +1,13 @@
 const fishData = require('./fish-data.json');
 const express = require('express');
+const cors = require('cors');
 
 const API_KEY = 'abrradiology';
 const APP_PORT = 5001;
 
 const app = express();
+
+app.use(cors());
 
 app.get(
     '/gofish',
