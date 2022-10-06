@@ -14,7 +14,7 @@ app.get(
     (req, res) => {
         // Check for API key.
         if (req.query.apikey === API_KEY) {
-            res.send(fishData)
+            res.send(fishData);
         } else {
             res.status(401).end();
         }
