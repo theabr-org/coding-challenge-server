@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/services/data.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { DataService } from 'src/services/data.service';
   templateUrl: './all-fish.component.html',
   styleUrls: ['./all-fish.component.css']
 })
-export class AllFishComponent {
+export class AllFishComponent implements OnInit{
   constructor(private dataService: DataService) { }
   public fishData: any[] = [];
 

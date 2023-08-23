@@ -1,5 +1,5 @@
 <div class="option-container">
     <ng-container *ngFor="let option of fishData">
-		<app-fish-option  [ngClass]="{'hidden': !option.FisheryManagement}" [item]=option></app-fish-option>
+		<app-fish-thumbnail [ngClass]="{'hidden': !option.FisheryManagement}" [item]=option></app-fish-thumbnail>
 	</ng-container>
 </div>

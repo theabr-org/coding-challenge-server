@@ -1,1 +1,4 @@
-<p>fish-details works!</p>
+<h3>{{fish.SpeciesName}}</h3>
+<ng-container *ngIf="fish && fish.Biology">
+    <div class="option-thumbnail" [innerHTML]="fish.Biology | sanitizeHtml"></div>
+</ng-container>

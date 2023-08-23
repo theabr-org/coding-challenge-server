@@ -1,3 +1,4 @@
-<ng-container *ngIf="item && item.FisheryManagement">
-    <div class="option-thumbnail" [innerHTML]="item.FisheryManagement | sanitizeHtml"></div>
+<h3>{{item.SpeciesName}}</h3>
+<ng-container *ngIf="item && item.Biology">
+    <div class="option-thumbnail" [innerHTML]="item.Biology | sanitizeHtml"></div>
 </ng-container>

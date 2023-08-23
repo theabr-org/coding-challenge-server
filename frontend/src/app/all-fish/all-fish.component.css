@@ -3,9 +3,11 @@
     flex-wrap: wrap;
 }
 
-app-fish-option {
+app-fish-thumbnail {
     flex: 45%;
-    margin: 0px 10px;
+    margin: 5px 10px;
+    border: 1px solid #000;
+    padding: 0px 10px;
 }
 
 .hidden {
@@ -13,7 +15,7 @@ app-fish-option {
 }
 
 @media all and (max-width: 600px) {
-    app-fish-option {
+    app-fish-thumbnail {
         width: 100%;
     }
 }
