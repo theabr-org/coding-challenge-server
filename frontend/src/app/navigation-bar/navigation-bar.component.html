@@ -1,0 +1,9 @@
+<div class="navbar">
+    <nav class="menu">
+        <ul>
+            <ng-container *ngFor="let fishName of speciesNameList; index as indexOfFish;">
+		        <li><a [href]="'fish/' + indexOfFish">{{fishName}}</a></li>
+	        </ng-container>
+        </ul>
+    </nav>
+</div>

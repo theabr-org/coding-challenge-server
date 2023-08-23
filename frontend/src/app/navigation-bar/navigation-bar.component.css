@@ -1,0 +1,17 @@
+.menu ul {
+    list-style-type: none;
+    margin: 10px 0px;
+    padding: 0;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+}
