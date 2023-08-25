@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
 	providedIn: 'root'
@@ -14,7 +14,7 @@ export class DataService {
 
 	// TODO: this should be loaded into the state so that it doesn't have to make multiple calls
 	// Add RXJS later to make this call one time and then use the state to populate components with data
-	getGoFish(): Observable<any[]> {
+	getAllFish(): Observable<any[]> {
 		const reqQuery = { apikey: this.API_LOCALKEY }
 		return this.http.get<any[]>(`${this.API_LOCALHOST}/gofish`, { params: reqQuery });
 	}

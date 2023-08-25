@@ -16,7 +16,7 @@ export class FishDetailsComponent {
 			this.id = this.route.snapshot.paramMap.get('id') || ''
 		}
 
-		this.dataService.getGoFish().subscribe((fishes: any[]) => {
+		this.dataService.getAllFish().subscribe((fishes: any[]) => {
 			let fishIndex = Number(this.id);
 			this.fish = fishes.at(fishIndex);
 		})
