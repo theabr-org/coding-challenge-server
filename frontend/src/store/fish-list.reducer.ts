@@ -1,18 +1,16 @@
 import { createReducer, on } from '@ngrx/store';
-import { getFishList, resetFishList } from './fish-list.action';
+import * as fishListActions from './fish-list.action';
+import { AppState } from './fish-list.selector';
 
-interface FishState {
-	fishList: any[];
-	selectedFishId: number | undefined;
-}
-
-const initialState: FishState = {
+const initialState: AppState = {
+	loading: false,
 	fishList: [],
 	selectedFishId: undefined
 };
 
-export const fishListReducer = createReducer(
+export const appReducer = createReducer(
 	initialState,
-	on(getFishList, (state) => initialState),
-	on(resetFishList, (state) => initialState)
+	on(fishListActions.getFishList, (state: AppState) => ({ ...state, loading: true })),
+	on(fishListActions.fishListLoaded, (state: AppState, { fishList: payload }: AppState) => ({ ...state, fishList: payload, loading: false })),
+	on(fishListActions.resetFishList, (state: AppState) => initialState)
 );

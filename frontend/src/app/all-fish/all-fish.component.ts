@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { getFishList } from 'src/store/fish-list.action';
+import { Observable } from 'rxjs';
+import * as fishListActions from 'src/store/fish-list.action';
 
 @Component({
 	selector: 'app-all-fish',
@@ -8,10 +9,12 @@ import { getFishList } from 'src/store/fish-list.action';
 	styleUrls: ['./all-fish.component.css']
 })
 export class AllFishComponent implements OnInit {
-	constructor(private store: Store) { }
 	public fishData: any[] = [];
+	fishList$: Observable<any[]> = this.store.select(state => state.fishList);
+
+	constructor(private store: Store<any>) { }
 
 	ngOnInit() {
-		this.store.dispatch(getFishList())
+		this.store.dispatch(fishListActions.getFishList())
 	}
 }
