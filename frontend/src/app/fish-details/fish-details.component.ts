@@ -20,5 +20,6 @@ export class FishDetailsComponent {
 			let fishIndex = Number(this.id);
 			this.fish = fishes.at(fishIndex);
 		})
+		// TODO: More Fish Details are present to be displayed. Some of these might be better utilized in generic type components
 	}
 }

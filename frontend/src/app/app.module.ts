@@ -25,8 +25,8 @@ import { AllFishComponent } from './all-fish/all-fish.component';
 	],
 	imports: [
 		BrowserModule,
-		StoreModule.forRoot(),
-		EffectsModule.forRoot(effects),
+		//StoreModule.forRoot(),
+		//EffectsModule.forRoot(effects),
 		storeDevTools,
 		HttpClientModule,
 		AppRoutingModule
